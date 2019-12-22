@@ -6,6 +6,7 @@ gem 'table_print'
 gem 'devise'
 gem 'dotenv'
 
+
 # Gem to generate charts
 gem 'chartkick'
 # Gem to group data
