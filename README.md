@@ -23,3 +23,4 @@ Pour accéder au dashboard patients/:id (le dernier id crée est 44, il faut don
 https://finalprojectthp-staging.herokuapp.com/patients/45)
 Pour accéder au dashboard practionners/:id 
 
+
