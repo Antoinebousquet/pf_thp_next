@@ -3,6 +3,7 @@ before_action :authorize_user, except: [:index]
 
   def index
     @id_user = current_practionner.id
+    @practionner = Practionner.find(current_practionner.id)
   end
 
   def show

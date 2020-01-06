@@ -11,6 +11,8 @@ class Patient < ApplicationRecord
   has_many :data_shows, dependent: :delete_all
   has_many :days, through: :data_shows
 
+  has_one_attached :avatar
+
   def welcome_send
     PatientMailer.welcome_email(self).deliver_now
   end

@@ -10,7 +10,13 @@
       <div class="col-lg-12">
         <div class="row">
           <div class="col-md-6 text-center">
+            <%= image_tag @practionner.avatar, alt: 'avatar' %>
             <img class="mx-auto rounded-circle" src="https://i.goopics.net/nyPvX.png" alt=""><br>
+              <h3>Changer d'avatar ?</h3>
+                <%= form_tag practionner_avatars_path(@practionner), multipart: true do %>
+                  <%= file_field_tag :avatar %>
+                  <%= submit_tag "mettre à jour" %>
+                <% end %>
             <br>
             <h3 class="section-subheading"><%= current_practionner.first_name %> <%= current_practionner.last_name %></h3>
             <p class="text-muted"><%= current_practionner.specialty %></p>

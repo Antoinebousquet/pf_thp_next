@@ -45,6 +45,10 @@
                 <div>
                   <center><%= f.submit "Mettre à jour", class:"button_color-profile" %></center>
                 </div>
+                <%= form_tag do %>
+                  <%= file_field_tag :avatar %>
+                  <%= submit_tag "uploader l'avatar" %>
+                <% end %>
               </div>
             </div>
           </div>
