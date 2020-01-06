@@ -10,8 +10,8 @@
       <div class="col-lg-12">
         <div class="row">
           <div class="col-md-6 text-center">
-            <%= image_tag @practionner.avatar, alt: 'avatar' %>
-            <img class="mx-auto rounded-circle" src="https://i.goopics.net/nyPvX.png" alt=""><br>
+            <%= image_tag @practionner.avatar, class:"avatar-md rounded-circle", alt: 'avatar' %>
+            <br>
               <h3>Changer d'avatar ?</h3>
                 <%= form_tag practionner_avatars_path(@practionner), multipart: true do %>
                   <%= file_field_tag :avatar %>

@@ -4,7 +4,7 @@
     <a class="mb-0 text-black d-none d-lg-inline-block">Bonjour Docteur <%= current_practionner.last_name %> !</a>
     <!-- User -->
     <div class="dropdown">
-      <img src="https://bit.ly/352vL1I" class="float-left rounded-circle avatar-sm">
+      <%= image_tag @practionner.avatar, class:"float-left rounded-circle avatar-sm", alt: 'avatar' %>
       <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Mon compte
       </button>

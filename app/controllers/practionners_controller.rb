@@ -8,6 +8,7 @@ before_action :authorize_user, except: [:index]
 
   def show
   	@patients_of_the_day = Practionner.find(params[:id]).patients
+    @practionner = Practionner.find(current_practionner.id)
   end
 
   def edit
