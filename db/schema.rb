@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_200853) do
     t.datetime "date"
     t.integer "hours_of_sleep"
     t.integer "mood"
-    t.text "treatment"
+    t.integer "treatment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_200853) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.text "treatment"
+    t.integer "treatment"
     t.string "city"
     t.string "sexe"
     t.datetime "birth"

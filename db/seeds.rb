@@ -19,7 +19,7 @@ DataShow.destroy_all
 
   20.times do |data_chart|
     Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: rand(3..7),
-      mood: rand(1..9), created_at: DateTime.new(2015, 6, count_day))
+      mood: rand(1..9), treatment: rand(-1..1), created_at: DateTime.new(2015, 6, count_day))
     DataShow.create(patient_id: @patient.id, day_id: count_day)
     count_day += 1
   end
