@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :avatars, only: [:create]
   end
   resources :patient_list
+  resources :days
   resources :doctor_appointment_list
   resources :practionners do
     resources :avatars, only: [:create]

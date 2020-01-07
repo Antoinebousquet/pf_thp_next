@@ -13,6 +13,10 @@ gem 'chartkick'
 gem 'groupdate'
 # Gem Faker to create the seed
 gem 'faker'
+# Gem to export in excel format
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+
 gem "letter_opener", :group => :development
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

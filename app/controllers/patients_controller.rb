@@ -7,6 +7,15 @@ before_action :authorize_user, except: [:index]
 
   def show
   	@patient_day = Patient.find(params[:id]).days
+    @datas = Day.all
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename='index.xlsx'"
+      }
+      format.html { render :show }
+    end
   end
 
   def edit

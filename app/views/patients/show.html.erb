@@ -11,6 +11,8 @@
       <br>
       <h4>Mon sommeil</h4>
       <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep) %>
+      <br>
+      <%= link_to 'Download as Excel', days_path(format: :xlsx) %>
     </div>
   </div>
 </div>
