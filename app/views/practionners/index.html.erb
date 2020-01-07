@@ -10,7 +10,11 @@
       <div class="col-lg-12">
         <div class="row">
           <div class="col-md-6 text-center">
-            <%= image_tag @practionner.avatar, class:"avatar-md rounded-circle", alt: 'avatar' %>
+            <%if @practionner.avatar.attached?%>
+              <%= image_tag @practionner.avatar, class:"avatar-md rounded-circle", alt: 'avatar' %>
+            <%else%>
+              <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+            <%end%>
             <br>
               <h3>Changer d'avatar ?</h3>
                 <%= form_tag practionner_avatars_path(@practionner), multipart: true do %>
@@ -57,3 +61,4 @@
   </div>
 </div>
 </div>
+

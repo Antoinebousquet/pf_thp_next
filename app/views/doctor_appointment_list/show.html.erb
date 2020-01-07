@@ -11,7 +11,11 @@
         <div class="card mb-3 mr-3" style="width: 18rem;">
           <div class="card-header"><%= appointment.date %></div>
           <div class="card-body">
-            <img src="https://bit.ly/352vL1I" class="float-left rounded-circle avatar-md">
+            <%if appointment.practionner.avatar.attached?%>
+              <%= image_tag appointment.practionner.avatar , class:"float-left rounded-circle avatar-md", alt: 'avatar' %>
+            <%else%>
+              <p>=== No picture ===</p>
+            <%end%>
             <div class="content">
               <h5 class="card-title"><%= "Dr #{appointment.practionner.last_name}" %></h5>
               <h6 class="card-subtitle mb-2 text-muted"><%= appointment.practionner.specialty %></h6>
@@ -32,7 +36,11 @@
       <% @patient_practionners.each do |practionner| %>
         <div class="card mb-3 mr-3" style="width: 18rem;">
           <div class="card-body">
-            <img src="https://bit.ly/352vL1I" class="float-left rounded-circle avatar-md">
+            <%if practionner.avatar.attached?%>
+              <%= image_tag practionner.avatar , class:"float-left rounded-circle avatar-md", alt: 'avatar' %>
+            <%else%>
+              <p>=== No picture ===</p>
+            <%end%>
             <div class="content">
               <h5 class="card-title">Dr. <%= practionner.first_name %> <%= practionner.last_name %></h5>
               <h6 class="card-subtitle mb-2 text-muted"><%= practionner.specialty %></h6>

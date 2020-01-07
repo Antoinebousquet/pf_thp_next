@@ -2,7 +2,7 @@ class PatientsController < ApplicationController
 before_action :authorize_user, except: [:index]
 
   def index
-    
+    @patient = Patient.find(current_patient.id)
   end
 
   def show

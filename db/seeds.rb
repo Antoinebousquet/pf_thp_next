@@ -12,12 +12,12 @@ Appointment.destroy_all
 Day.destroy_all
 DataShow.destroy_all
 
-10.times do |user|
+5.times do |user|
 
   @patient = Patient.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name , email: "patient#{user}@yopmail.com", password: "azerty", sexe: Faker::Gender.binary_type, treatment: Faker::Science.element, birth: Faker::Date.birthday(min_age: 18, max_age: 65), phone: Faker::PhoneNumber.phone_number, city: Faker::Address.city )
   count_day = 1
 
-  25.times do |data_chart|
+  20.times do |data_chart|
     Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: rand(3..7),
       mood: rand(1..9), created_at: DateTime.new(2015, 6, count_day))
     DataShow.create(patient_id: @patient.id, day_id: count_day)
@@ -27,7 +27,7 @@ DataShow.destroy_all
 
   @practionner = Practionner.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name , email: "practionner#{user}@yopmail.com", password: "azerty", sexe: Faker::Gender.binary_type, specialty: Faker::Educator.subject, adress: Faker::Address.full_address, diploma: Faker::Educator.degree)
 
-  5.times do |appointment|
+  3.times do |appointment|
     Appointment.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), place: Faker::Address.city, 
     patient_id: Patient.all.sample.id, practionner_id: @practionner.id )
   end

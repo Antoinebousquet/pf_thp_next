@@ -4,7 +4,11 @@
     <a class="mb-0 text-black d-none d-lg-inline-block">Bonjour Docteur <%= current_practionner.last_name %> !</a>
     <!-- User -->
     <div class="dropdown">
-      <%= image_tag @practionner.avatar, class:"float-left rounded-circle avatar-sm", alt: 'avatar' %>
+      <%if current_practionner.avatar.attached?%>
+        <%= image_tag current_practionner.avatar, class:"avatar-md rounded-circle", alt: 'avatar' %>
+      <%else%>
+        <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+      <%end%>
       <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Mon compte
       </button>
