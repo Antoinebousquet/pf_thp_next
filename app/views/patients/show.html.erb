@@ -27,17 +27,17 @@
       <hr class="accent mb-3">
       <div>
         <h4>Évolution de l'humeur</h4>
-        <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "150px" %>
+        <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px" %>
       </div>
       <br>
       <div>
         <h4>Durée de sommeil</h4>
-        <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep), height: "150px" %>
+        <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep), height: "160px", points: false, dataset: {borderWidth: 4} %>
       </div>
       <br>
       <div>
         <h4>Observance du traitement</h4>
-        <%= column_chart @patient_day.group_by_day(:created_at).sum(:treatment), height: "150px" %>
+        <%= column_chart @patient_day.group_by_day(:created_at).sum(:treatment), height: "120px", label: "Value" %>
       </div>
     </div>
   </div>
