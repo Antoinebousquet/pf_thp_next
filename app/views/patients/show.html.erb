@@ -20,15 +20,25 @@
   <div id="content">
     <%= render 'layouts/top-navbar-doctor' %>
     <div class="container">
+      <br>
       <h2 class="text-center">
         <%= "Dashboard du patient: #{Patient.find(params[:id]).first_name} #{Patient.find(params[:id]).last_name}" %>
       </h2>
       <hr class="accent mb-3">
-      <h4>Courbe d'humeur</h4>
-      <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood) %>
+      <div>
+        <h4>Évolution de l'humeur</h4>
+        <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "150px" %>
+      </div>
       <br>
-      <h4>Sommeil</h4>
-      <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep) %>
+      <div>
+        <h4>Durée de sommeil</h4>
+        <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep), height: "150px" %>
+      </div>
+      <br>
+      <div>
+        <h4>Observance du traitement</h4>
+        <%= column_chart @patient_day.group_by_day(:created_at).sum(:treatment), height: "150px" %>
+      </div>
     </div>
   </div>
 </div>

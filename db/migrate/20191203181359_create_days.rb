@@ -4,7 +4,7 @@ class CreateDays < ActiveRecord::Migration[5.2]
       t.datetime :date
       t.integer :hours_of_sleep
       t.integer :mood
-      t.text :treatment
+      t.integer :treatment
 
       t.timestamps
     end
