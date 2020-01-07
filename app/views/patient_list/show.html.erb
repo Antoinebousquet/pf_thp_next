@@ -60,7 +60,11 @@ function myFunction() {
             <li class="list-group-item">
               <div class="row w-100">
                 <div class="col-12 col-sm-6 col-md-3 px-0">
-                  <img src="http://demos.themes.guide/bodeo/assets/images/users/m101.jpg" alt="Mike Anamendolla" class="rounded-circle mx-auto d-block img-fluid">
+                  <%if patient.avatar.attached?%>
+                    <%= image_tag patient.avatar , class:"rounded-circle mx-auto d-block img-fluid", alt: 'avatar' %>
+                  <%else%>
+                    <p>=== No picture ===</p>
+                  <%end%>
                 </div>
                 <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
                   <label class="name lead">	<%= patient.first_name %> <%= patient.last_name%> </label>
@@ -87,3 +91,4 @@ function myFunction() {
 </html>
 </div>
 </div>
+
