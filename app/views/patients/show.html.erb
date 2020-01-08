@@ -27,7 +27,7 @@
       <hr class="accent mb-3">
       <div>
         <h4>Évolution de l'humeur</h4>
-        <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px" %>
+        <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px", xmin: "2015-06-01", xmax: "2015-06-15" %>
       </div>
       <br>
       <div>
