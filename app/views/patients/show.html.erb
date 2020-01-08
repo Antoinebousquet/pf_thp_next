@@ -37,7 +37,7 @@
           </div>
         </div>
         <br>
-          <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px", xmin: "2015-06-01", xmax: "2015-06-15" %>
+          <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px" %>
         </div>
         <br>
         <div class="container">

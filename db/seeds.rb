@@ -35,13 +35,107 @@ DataShow.destroy_all
 
 end
 
-  @patient = Patient.create(first_name: "Arnaud", last_name: "Dumont" , email: "patient#{user}@yopmail.com", password: "azerty", sexe: Faker::Gender.binary_type, treatment: Faker::Science.element, birth: Faker::Date.birthday(min_age: 18, max_age: 65), phone: Faker::PhoneNumber.phone_number, city: Faker::Address.city )
+  Patient.create(first_name: "Arnaud", last_name: "Dumont" , email: "arnaud.dumont@yopmail.com", password: "azerty", sexe: Faker::Gender.binary_type, treatment: Faker::Science.element, birth: Faker::Date.birthday(min_age: 18, max_age: 65), phone: Faker::PhoneNumber.phone_number, city: Faker::Address.city )
+  
+  Appointment.create(date: Date.today, place: Faker::Address.city, 
+    patient_id: 6, practionner_id: 3)
+
   Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
     mood: 4, treatment: 1, created_at: DateTime.new(2015, 6, 1))
-  DataShow.create(patient_id: 6, day_id: count_day)
-    count_day += 1
-  Appointment.create(date: Date.today), place: Faker::Address.city, 
-    patient_id: 6, practionner_id: 3 )
+  DataShow.create(patient_id: 6, day_id: 101)
 
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 8,
+    mood: 4, treatment: 1, created_at: DateTime.new(2015, 6, 2))
+  DataShow.create(patient_id: 6, day_id: 102)
 
-  puts "Example patient and 25 data created"
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 8,
+    mood: 4, treatment: 1, created_at: DateTime.new(2015, 6, 3))
+  DataShow.create(patient_id: 6, day_id: 103)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
+    mood: 3, treatment: 0, created_at: DateTime.new(2015, 6, 4))
+  DataShow.create(patient_id: 6, day_id: 104)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
+    mood: 4, treatment: 1, created_at: DateTime.new(2015, 6, 5))
+  DataShow.create(patient_id: 6, day_id: 105)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 6,
+    mood: 2, treatment: 0, created_at: DateTime.new(2015, 6, 6))
+  DataShow.create(patient_id: 6, day_id: 106)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
+    mood: 0, treatment: 1, created_at: DateTime.new(2015, 6, 7))
+  DataShow.create(patient_id: 6, day_id: 107)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 6,
+    mood: -1, treatment: 0, created_at: DateTime.new(2015, 6, 8))
+  DataShow.create(patient_id: 6, day_id: 108)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 5,
+    mood: -2, treatment: -1, created_at: DateTime.new(2015, 6, 9))
+  DataShow.create(patient_id: 6, day_id: 109)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 5,
+    mood: -2, treatment: -1, created_at: DateTime.new(2015, 6, 10))
+  DataShow.create(patient_id: 6, day_id: 110)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 3,
+    mood: -3, treatment: -1, created_at: DateTime.new(2015, 6, 11))
+  DataShow.create(patient_id: 6, day_id: 111)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 3,
+    mood: -3, treatment: -1, created_at: DateTime.new(2015, 6, 12))
+  DataShow.create(patient_id: 6, day_id: 112)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 4,
+    mood: -2, treatment: -1, created_at: DateTime.new(2015, 6, 13))
+  DataShow.create(patient_id: 6, day_id: 113)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 11,
+    mood: -2, treatment: -1, created_at: DateTime.new(2015, 6, 14))
+  DataShow.create(patient_id: 6, day_id: 114)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 9,
+    mood: 0, treatment: -1, created_at: DateTime.new(2015, 6, 15))
+  DataShow.create(patient_id: 6, day_id: 115)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 9,
+    mood: -1, treatment: 1, created_at: DateTime.new(2015, 6, 16))
+  DataShow.create(patient_id: 6, day_id: 116)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 8,
+    mood: 1, treatment: 1, created_at: DateTime.new(2015, 6, 17))
+  DataShow.create(patient_id: 6, day_id: 117)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
+    mood: 2, treatment: 1, created_at: DateTime.new(2015, 6, 18))
+  DataShow.create(patient_id: 6, day_id: 118)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 8,
+    mood: 2, treatment: 0, created_at: DateTime.new(2015, 6, 19))
+  DataShow.create(patient_id: 6, day_id: 119)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
+    mood: 1, treatment: 1, created_at: DateTime.new(2015, 6, 20))
+  DataShow.create(patient_id: 6, day_id: 120)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 6,
+    mood: 2, treatment: 1, created_at: DateTime.new(2015, 6, 21))
+  DataShow.create(patient_id: 6, day_id: 121)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 6,
+    mood: 3, treatment: 1, created_at: DateTime.new(2015, 6, 22))
+  DataShow.create(patient_id: 6, day_id: 122)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 6,
+    mood: 1, treatment: 0, created_at: DateTime.new(2015, 6, 23))
+  DataShow.create(patient_id: 6, day_id: 123)
+
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 6,
+    mood: 1, treatment: 0, created_at: DateTime.new(2015, 6, 24))
+  DataShow.create(patient_id: 6, day_id: 124)
+
+  
+
+  puts "Example patient and 24 data created"
