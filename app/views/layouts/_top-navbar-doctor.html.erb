@@ -1,7 +1,8 @@
 <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
   <div class="container-fluid">
     <!-- Brand -->
-    <a class="mb-0 text-black d-none d-lg-inline-block">Bonjour Docteur <%= current_practionner.last_name %> !</a>
+    <a class="mb-0 text-black d-none d-lg-inline-block">
+      Bonjour Docteur <%= current_practionner.last_name %> ! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<%= Time.now.strftime("%A %d %b %Y") %></a>
     <!-- User -->
     <div class="dropdown">
       <%if current_practionner.avatar.attached?%>

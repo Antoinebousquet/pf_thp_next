@@ -11,16 +11,16 @@
     <h5>Mes rendez-vous du jour</h5>
     <% @patients_of_the_day.each do |patient_of_the_day| %>
       <div class="card mb-3">
-        <div class="card-body">
-          <%if patient_of_the_day.avatar.attached?%>
-            <%= image_tag patient_of_the_day.avatar , class:"float-left rounded-circle avatar-md", alt: 'avatar' %>
-          <%else%>
-            <p>=== No picture ===</p>
-          <%end%>
-          <h5 class="card-title"><%= link_to "#{patient_of_the_day.first_name} #{patient_of_the_day.last_name}", patient_path(patient_of_the_day.id) %></h5>
-          <p class="card-text">Dernières notes : Période de stabilisation de l'humeur du patient</p>
-          <p class="card-text"><small class="text-muted"> <%= Time.now.strftime("%m/%d/%Y at %I:%M%p") %> </small></p>
-        </div>
+            <div class="card-body">
+              <%if patient_of_the_day.avatar.attached?%>
+                <%= image_tag patient_of_the_day.avatar , class:"float-left rounded-circle avatar-md", alt: 'avatar' %>
+              <%else%>
+                <p>=== No picture ===</p>
+              <%end%>
+              <h5 class="card-title"><%= link_to "#{patient_of_the_day.first_name} #{patient_of_the_day.last_name}", patient_path(patient_of_the_day.id) %></h5>
+              <p class="card-text">Dernières notes : Période de stabilisation de l'humeur du patient</p>
+              <p class="card-text"><small class="text-muted"> <%= Time.now.strftime("%m/%d/%Y at %I:%M%p") %> </small></p>
+            </div>
       </div>
     <% end %>
   </div>

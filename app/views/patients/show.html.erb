@@ -21,10 +21,24 @@
     <%= render 'layouts/top-navbar-doctor' %>
     <div class="container">
       <br>
-      <h2 class="text-center">
-        <%= "Dashboard du patient: #{Patient.find(params[:id]).first_name} #{Patient.find(params[:id]).last_name}" %>
-      </h2>
-      <hr class="accent mb-3">
+      <div class="row">
+        <div class="col-1">
+          <img src="/notebook.svg" id="logo_notes" >
+        </div>
+        <div class="col-1">
+          <img src="/agenda.svg" id="logo_agenda" >
+        </div>
+        <div class="col-8">
+          <h2 class="text-center">
+            <%= "Dashboard du patient: #{Patient.find(params[:id]).first_name} #{Patient.find(params[:id]).last_name}" %>
+          </h2>
+          <hr class="accent mb-3">
+        </div>
+        <div class="col-2">
+        </div>
+      </div>
+      <br>
+      <br>
       <div>
         <div class="container">
           <div class="row">

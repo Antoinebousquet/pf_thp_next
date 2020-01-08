@@ -62,8 +62,16 @@ p {
     color: #696969 !important;
 }
 
-.link_color-bipolink {
-    color: white !important;
+.button_color-bipolink {
+    color: #696969 !important;
+}
+
+#logo_agenda {
+    height: 5em;
+}
+
+#logo_notes {
+    height: 5em;
 }
 
 .button_color-profile {
