@@ -26,19 +26,101 @@
       </h2>
       <hr class="accent mb-3">
       <div>
-        <h4>Évolution de l'humeur</h4>
-        <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px", xmin: "2015-06-01", xmax: "2015-06-15" %>
-      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-11">
+              <h4>Évolution de l'humeur</h4>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-export">export</button>
+            </div>
+          </div>
+        </div>
+        <br>
+          <%= line_chart @patient_day.group_by_day(:created_at).sum(:mood), height: "160px", xmin: "2015-06-01", xmax: "2015-06-15" %>
+        </div>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-9">
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Year </button>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Month</button>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Week </button>
+            </div>
+          </div>
+        </div>
+      <br>
+      <br>
       <br>
       <div>
-        <h4>Durée de sommeil</h4>
-        <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep), height: "160px", points: false, dataset: {borderWidth: 4} %>
-      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-11">
+              <h4>Durée de sommeil</h4>
+            </div>
+             <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-export">export</button>
+            </div>
+          </div>
+        </div>
+            <br>
+              <%= line_chart @patient_day.group_by_day(:created_at).sum(:hours_of_sleep), height: "160px", points: false, dataset: {borderWidth: 4} %>
+            </div>
+            <br>
+            <div class="container">
+          <div class="row">
+            <div class="col-9">
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Year </button>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Month</button>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Week </button>
+            </div>
+          </div>
+        </div>
+      <br>
+      <br>
       <br>
       <div>
-        <h4>Observance du traitement</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-11">
+              <h4>Observance du traitement</h4>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-export">export</button>
+            </div>
+          </div>
+        </div>
+        <br>
         <%= column_chart @patient_day.group_by_day(:created_at).sum(:treatment), height: "120px", label: "Value" %>
       </div>
+      <br>
+      <div class="container">
+          <div class="row">
+            <div class="col-9">
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Year </button>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Month</button>
+            </div>
+            <div class="col-1">
+              <button class="btn btn-light btn-xl button_color-periods">Week </button>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>

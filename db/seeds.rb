@@ -34,3 +34,14 @@ DataShow.destroy_all
   puts "One practionner and 5 associated appointments have been created. The practionner email : practionner#{user}@yopmail.com. The password : azerty."
 
 end
+
+  @patient = Patient.create(first_name: "Arnaud", last_name: "Dumont" , email: "patient#{user}@yopmail.com", password: "azerty", sexe: Faker::Gender.binary_type, treatment: Faker::Science.element, birth: Faker::Date.birthday(min_age: 18, max_age: 65), phone: Faker::PhoneNumber.phone_number, city: Faker::Address.city )
+  Day.create(date: Faker::Date.between(from: 10.days.ago, to: Date.today), hours_of_sleep: 7,
+    mood: 4, treatment: 1, created_at: DateTime.new(2015, 6, 1))
+  DataShow.create(patient_id: 6, day_id: count_day)
+    count_day += 1
+  Appointment.create(date: Date.today), place: Faker::Address.city, 
+    patient_id: 6, practionner_id: 3 )
+
+
+  puts "Example patient and 25 data created"

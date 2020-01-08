@@ -88,6 +88,42 @@ p {
 
 }
 
+.button_color-export {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(17,73,145);
+  border-radius: 6px;
+  border-color: #29ace2 !important;
+  border-width: 2px !important;
+  font-size: 14px;
+  color: #fff;
+  line-height: 16px;
+}
+
+.button_color-periods {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  background: rgb(17,73,145);
+  border-radius: 6px;
+  border-color: #fcf113 !important;
+  border-width: 2px !important;
+  font-size: 12px !important;
+  color: #fff;
+  line-height: 16px;
+}
+
+
 #editprofile {
     color: #696969;
     padding: 100px 0;
